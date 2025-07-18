@@ -27,7 +27,13 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
-import { useTheme } from 'next-themes';
+
+const mikuAvatars = [
+    "https://static.wikia.nocookie.net/projectsekai/images/9/9f/Vividbadsquad-miku.png/revision/latest/scale-to-width-down/1000?cb=20230616181250",
+    "https://static.wikia.nocookie.net/projectsekai/images/0/00/25ji-miku.png/revision/latest/scale-to-width-down/1000?cb=20230616181455",
+    "https://static.wikia.nocookie.net/projectsekai/images/e/eb/Happy_Anniversary%21%21_%28Miku%29_transparent.png/revision/latest?cb=20220830163924",
+    "https://static.wikia.nocookie.net/projectsekai/images/c/cc/Half-Anniversary_Exhibition_Jimmy.jpg/revision/latest?cb=20231020184449",
+];
 
 type Message = {
   id: string;
@@ -50,6 +56,13 @@ const LoadingDots = () => (
 export function Chat() {
   const { toast } = useToast();
   const scrollAreaRef = React.useRef<HTMLDivElement>(null);
+  const [avatarUrl, setAvatarUrl] = React.useState(mikuAvatars[0]);
+
+  React.useEffect(() => {
+    // Select a random avatar on the client-side to avoid hydration mismatch
+    setAvatarUrl(mikuAvatars[Math.floor(Math.random() * mikuAvatars.length)]);
+  }, []);
+
   const [messages, setMessages] = React.useState<Message[]>([
     {
       id: '1',
@@ -140,7 +153,7 @@ export function Chat() {
     <Card className="w-full max-w-2xl h-[70vh] flex flex-col shadow-2xl shadow-primary/10">
       <CardHeader className="flex flex-row items-center gap-3">
         <Avatar className="h-12 w-12 border-2 border-primary/50">
-          <AvatarImage src="https://placehold.co/128x128.png" alt="Hatsune Miku" data-ai-hint="hatsune miku" />
+          <AvatarImage src={avatarUrl} alt="Hatsune Miku" />
           <AvatarFallback>HM</AvatarFallback>
         </Avatar>
         <div className="flex flex-col">
@@ -167,7 +180,7 @@ export function Chat() {
               >
                 {message.role === 'assistant' && (
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="https://placehold.co/128x128.png" alt="Hatsune Miku" data-ai-hint="hatsune miku" />
+                    <AvatarImage src={avatarUrl} alt="Hatsune Miku" />
                     <AvatarFallback>HM</AvatarFallback>
                   </Avatar>
                 )}
