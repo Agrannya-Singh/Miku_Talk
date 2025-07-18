@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Image from "next/image"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -12,30 +11,22 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-const tracks = [
+const videos = [
   {
-    title: "World is Mine",
-    artist: "ryo (supercell)",
-    image: "https://placehold.co/400x400.png",
-    hint: "anime princess"
+    src: "https://www.youtube.com/embed/_-2dIuV34cs",
+    title: "Miku by Anamanaguchi (Lyrics Video)",
   },
   {
-    title: "Melt",
-    artist: "ryo (supercell)",
-    image: "https://placehold.co/400x400.png",
-    hint: "anime couple"
+    src: "https://www.youtube.com/embed/NY__VTIUsiU",
+    title: "[1080P Full風] World is Mine ワールドイズマイン -Hatsune Miku 初音ミク Project DIVA English lyrics Romaji PDFT",
   },
   {
-    title: "PoPiPo",
-    artist: "LamazeP",
-    image: "https://placehold.co/400x400.png",
-    hint: "vegetable juice"
+    src: "https://www.youtube.com/embed/Mqps4anhz0Q",
+    title: "[1080P Full風] 千本桜 Senbonzakura \"One Thousand Cherry Trees\"- 初音ミク Hatsune Miku DIVA English Romaji",
   },
   {
-    title: "Tell Your World",
-    artist: "livetune",
-    image: "https://placehold.co/400x400.png",
-    hint: "digital world"
+    src: "https://www.youtube.com/embed/udg1bIBUzJM",
+    title: "「4K 60 fps」 World's End Dancehall (ワールズエンド・ダンスホール) / wowaka | Project DIVA Arcade Future Tone",
   },
 ];
 
@@ -53,26 +44,20 @@ export function PopularTracks() {
           className="w-full"
         >
           <CarouselContent>
-            {tracks.map((track, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-full">
+            {videos.map((video, index) => (
+              <CarouselItem key={index} className="lg:basis-full">
                 <div className="p-1">
-                  <div className="flex items-center gap-4 rounded-lg border p-3">
-                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-md">
-                      <Image
-                        src={track.image}
-                        alt={`Cover for ${track.title}`}
-                        data-ai-hint={track.hint}
-                        fill
-                        className="object-cover"
-                      />
+                    <div className="aspect-video">
+                        <iframe
+                            className="w-full h-full rounded-lg"
+                            src={video.src}
+                            title={video.title}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        ></iframe>
                     </div>
-                    <div className="min-w-0">
-                      <p className="truncate font-semibold">{track.title}</p>
-                      <p className="truncate text-sm text-muted-foreground">
-                        {track.artist}
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </CarouselItem>
             ))}
