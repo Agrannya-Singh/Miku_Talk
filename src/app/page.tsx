@@ -3,7 +3,7 @@ import { Icons } from '@/components/icons';
 import { MikuGallery } from '@/components/miku-gallery';
 import { PopularTracks } from '@/components/popular-tracks';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -34,11 +34,15 @@ export default function Home() {
         <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-3">
              <div className="flex flex-col items-center text-center mb-8">
-                <div className="relative w-32 h-32 mb-4">
-                   <Avatar className="h-32 w-32 rounded-full shadow-lg border-4 border-primary/50">
-                    <AvatarImage src="https://avatarfiles.alphacoders.com/340/thumb-350-340919.webp" data-ai-hint="hatsune miku" alt="Hatsune Miku" />
-                    <AvatarFallback>HM</AvatarFallback>
-                  </Avatar>
+                <div className="relative w-48 h-48 mb-4">
+                   <Image
+                      src="https://static.wikia.nocookie.net/vocaloid/images/d/d4/Miku_v4_chinese_box.png/revision/latest"
+                      alt="Hatsune Miku Box Art"
+                      width={192}
+                      height={192}
+                      className="rounded-full object-cover shadow-lg border-4 border-primary/50"
+                      data-ai-hint="hatsune miku"
+                   />
                 </div>
                 <h1 className="font-headline animate-text-glow text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl">
                   MikuTalk
