@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <CardHeader>
                     <div className="flex items-center gap-4">
                         <Avatar className="w-16 h-16 border-2 border-primary">
-                            <AvatarImage src="https://static.wikia.nocookie.net/projectsekai/images/e/eb/Happy_Anniversary%21%21_%28Miku%29_transparent.png/revision/latest" data-ai-hint="hatsune miku" alt="Hatsune Miku Avatar" />
+                            <AvatarImage src="https://avatarfiles.alphacoders.com/340/thumb-350-340919.webp" data-ai-hint="hatsune miku" alt="Hatsune Miku Avatar" />
                             <AvatarFallback>HM</AvatarFallback>
                         </Avatar>
                         <div>

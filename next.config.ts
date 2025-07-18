@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'static.wikia.nocookie.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatarfiles.alphacoders.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

@@ -28,7 +28,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 
-const mikuAvatarUrl = "https://static.wikia.nocookie.net/projectsekai/images/e/eb/Happy_Anniversary%21%21_%28Miku%29_transparent.png/revision/latest";
+const mikuAvatarUrl = "https://avatarfiles.alphacoders.com/340/thumb-350-340919.webp";
 
 type Message = {
   id: string;
