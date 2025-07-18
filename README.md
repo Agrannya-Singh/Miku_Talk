@@ -26,7 +26,7 @@ This project is built with a modern, robust, and scalable technology stack:
 
 -   **UI Components**: A huge thank you to the creators and contributors of [ShadCN UI](https://ui.shadcn.com/) for providing an exceptional library of accessible and beautifully crafted components.
 -   **Hatsune Miku**: This project is a tribute to the creative powerhouse that is Hatsune Miku. Hatsune Miku is a character and software developed by [Crypton Future Media, INC.](https://www.crypton.co.jp/). All character images, music, and likenesses are their property.
-
+- **The open source community**
 ## 🚀 Getting Started
 
 To get a local copy up and running, follow these simple steps.
@@ -55,4 +55,4 @@ To get a local copy up and running, follow these simple steps.
     npm run dev
     ```
 
-Open [http://localhost:9002](http://localhost:9002) with your browser to see the result.
+Open [http://localhost:9002](http://localhost:9002) with your browser to see the result
