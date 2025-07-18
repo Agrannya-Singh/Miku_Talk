@@ -56,8 +56,7 @@ export function Chat() {
     {
       id: '1',
       role: 'assistant',
-      content:
-        "Hello! I'm Hatsune Miku! It's so nice to meet you. What should we talk about? Maybe music, or singing, or anything you like! ✨",
+      content: 'GIT COMMIT',
     },
   ]);
   const [isPending, startTransition] = React.useTransition();
