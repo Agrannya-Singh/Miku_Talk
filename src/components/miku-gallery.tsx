@@ -49,7 +49,7 @@ export function MikuGallery() {
             {images.map((image, index) => (
               <CarouselItem key={index} className="lg:basis-full">
                 <div className="p-1">
-                    <div className="aspect-video relative">
+                    <div className="aspect-[4/3] relative">
                         <Image
                             src={image.src}
                             alt={image.alt}

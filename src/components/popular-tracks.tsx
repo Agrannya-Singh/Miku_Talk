@@ -36,7 +36,7 @@ export function PopularTracks() {
             {tracks.map((track, index) => (
               <CarouselItem key={index} className="lg:basis-full">
                 <div className="p-1">
-                    <div className="aspect-video relative">
+                    <div className="aspect-[4/3] relative">
                         <iframe
                             className="w-full h-full rounded-lg"
                             src={track}
