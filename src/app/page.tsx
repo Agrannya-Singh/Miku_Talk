@@ -3,6 +3,7 @@ import { Icons } from '@/components/icons';
 import { MikuGallery } from '@/components/miku-gallery';
 import { PopularTracks } from '@/components/popular-tracks';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Link from 'next/link';
 
 export default function Home() {
@@ -34,7 +35,10 @@ export default function Home() {
           <div className="lg:col-span-3">
              <div className="flex flex-col items-center text-center mb-8">
                 <div className="relative w-32 h-32 mb-4">
-                  <Icons.logo className="h-32 w-32 rounded-full object-cover shadow-lg border-4 border-primary/50 text-primary" />
+                   <Avatar className="h-32 w-32 rounded-full shadow-lg border-4 border-primary/50">
+                    <AvatarImage src="https://avatarfiles.alphacoders.com/340/thumb-350-340919.webp" data-ai-hint="hatsune miku" alt="Hatsune Miku" />
+                    <AvatarFallback>HM</AvatarFallback>
+                  </Avatar>
                 </div>
                 <h1 className="font-headline animate-text-glow text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl">
                   MikuTalk
