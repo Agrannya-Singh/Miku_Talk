@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 export const Icons = {
   logo: (props: SVGProps<SVGSVGElement>) => (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="https://img.icons8.com/?size=96&id=ivZ7BKswfMk7&format=png"
       width="24"
       height="24"
       viewBox="0 0 24 24"

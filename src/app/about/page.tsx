@@ -30,12 +30,12 @@ export default function AboutPage() {
         <div className="flex flex-col items-center gap-8">
             <div className="relative w-full h-64 rounded-xl overflow-hidden shadow-lg">
                  <Image
-                    src="https://placehold.co/1024x256.png"
+                    src="https://static.wikia.nocookie.net/projectsekai/images/c/cc/Half-Anniversary_Exhibition_Jimmy.jpg/revision/latest"
                     alt="Hatsune Miku live performance"
                     layout="fill"
                     objectFit="cover"
                     className="brightness-75"
-                    data-ai-hint="anime concert"
+                    data-ai-hint="hatsune miku"
                  />
                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
                     <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-shadow-lg" style={{textShadow: '2px 2px 8px hsl(var(--primary))'}}>
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <CardHeader>
                     <div className="flex items-center gap-4">
                         <Avatar className="w-16 h-16 border-2 border-primary">
-                            <AvatarImage src="https://placehold.co/128x128.png" data-ai-hint="hatsune miku" alt="Hatsune Miku Avatar" />
+                            <AvatarImage src="https://static.wikia.nocookie.net/projectsekai/images/e/eb/Happy_Anniversary%21%21_%28Miku%29_transparent.png/revision/latest" data-ai-hint="hatsune miku" alt="Hatsune Miku Avatar" />
                             <AvatarFallback>HM</AvatarFallback>
                         </Avatar>
                         <div>
