@@ -27,6 +27,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
+import { useTheme } from 'next-themes';
 
 type Message = {
   id: string;
@@ -136,10 +137,10 @@ export function Chat() {
   };
 
   return (
-    <Card className="w-full max-w-2xl h-[80vh] flex flex-col shadow-2xl shadow-primary/10">
+    <Card className="w-full max-w-2xl h-[70vh] flex flex-col shadow-2xl shadow-primary/10">
       <CardHeader className="flex flex-row items-center gap-3">
         <Avatar className="h-12 w-12 border-2 border-primary/50">
-          <AvatarImage src="https://placehold.co/128x128.png" alt="Hatsune Miku" data-ai-hint="hatsune miku anime" />
+          <AvatarImage src="https://placehold.co/128x128.png" alt="Hatsune Miku" data-ai-hint="hatsune miku" />
           <AvatarFallback>HM</AvatarFallback>
         </Avatar>
         <div className="flex flex-col">
@@ -166,7 +167,7 @@ export function Chat() {
               >
                 {message.role === 'assistant' && (
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="https://placehold.co/128x128.png" alt="Hatsune Miku" data-ai-hint="hatsune miku anime" />
+                    <AvatarImage src="https://placehold.co/128x128.png" alt="Hatsune Miku" data-ai-hint="hatsune miku" />
                     <AvatarFallback>HM</AvatarFallback>
                   </Avatar>
                 )}
